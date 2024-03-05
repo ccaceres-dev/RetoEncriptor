@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    
+</head>
+<body>
+        <header class="container-logo">
+            <img src="./img/logo_alura.png" alt="Logo Alura Latam">
+        </header>
+        <main>
+            <section class="container-encriptador">
+                <div>
+                    <textarea class="inputText" id="inputText" cols="30" rows="10" placeholder="Ingresa el texto aquí" title="Solo se permite texto en mayúsculas y sin acentos" oninput="this.value = this.value.toUpperCase();"></textarea>
+                    <div id="mensajeAlerta" class="mensaje-alerta"></div>
+                    <div class="message-advertencia">
+                        <img src="./img/signo_exclamacion.png" alt="Signo de exclamacion" style="width: 24px;">
+                        <p>  Solo se permite texto en mayúsculas y sin acentos</p>
+                    </div>
+                    <div class="container-buttons">
+                        <button id="bnt-encriptar" onclick="encriptar()">Encriptar</button>
+                        <button id="bnt-desencriptar" onclick="desencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+
+            </section>
+            <section class="container-desemcriptador">
+                <div class="container-output">
+                    <div id="container-result">
+                        <p id="resultado"></p>
+
+                    </div>
+                    <button class="bnt-copiar" onclick="copiarTexto()" >Copiar</button>
+                </div>
+            </section>
+        </main>
+    <script src="script.js"></script>    
+</body>
+</html>
